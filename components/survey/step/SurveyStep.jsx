@@ -3,18 +3,24 @@ import { STEP_TYPE } from '@/constants/constants';
 import { StepIcon } from '@/assets/icons/index';
 import { StepIconActive } from '@/assets/icons/index';
 
-const SurveyStep = ({ title, type = STEP_TYPE.finished }) => {
-    const [stepState, setStepState] = useState(STEP_TYPE.active);
-
+const SurveyStep = ({ title, type = STEP_TYPE.regular, step, index }) => {
     let stepBaseStyle =
         'flex flex-row items-center gap-5 font-roboto flex min-w-[300px] max-w-[400px] flex-row border-b px-10 py-8';
 
+    if (index < step) {
+        type = STEP_TYPE.finished;
+    } else if (index > step) {
+        type = STEP_TYPE.regular;
+    } else {
+        type = STEP_TYPE.active;
+    }
+
     switch (type) {
         case STEP_TYPE.regular:
-            stepBaseStyle += ' text-[#A9A9A9] bg-white border-[#E3E7ED]';
+            stepBaseStyle += ' text-[#A9A9A9] bg-white border-xpertina-border';
             break;
         case STEP_TYPE.active:
-            stepBaseStyle += ' font-bold text-white bg-[#4252FA] border-[#4252FA]';
+            stepBaseStyle += ' font-bold text-white bg-gradient-to-r border border-blue-700 p-4 animated-gradient';
             break;
         case STEP_TYPE.finished:
             stepBaseStyle += ' text-black bg-white border-[#E3E7ED]';

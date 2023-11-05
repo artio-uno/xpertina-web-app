@@ -4,14 +4,16 @@ import Link from 'next/link';
 
 const Button = ({ onClick, type, text, icon, visibility = true, href = '' }) => {
     let buttonClass =
-        'flex w-fit flex-row items-center px-6 py-3 font-semibold font-roboto justify-center gap-2 text-base text-center';
+        'flex w-fit flex-row items-center px-6 py-3 font-semibold tracking-wide font-roboto justify-center gap-2 text-base text-center';
 
     switch (type) {
         case BUTTON_TYPE.blue:
-            buttonClass += ' text-white bg-[#4353FF] text-white ease-in-out duration-200';
+            buttonClass +=
+                ' text-white bg-xpertina-blue ease-in-out duration-300 shadow-xpertina hover:shadow-xpertina-hover';
             break;
         case BUTTON_TYPE.border:
-            buttonClass += ' text-black bg-[#FFF] border border-[#CECECE] text-white ease-in-out duration-200';
+            buttonClass +=
+                ' hover:bg-gray-50 text-black bg-white border border-xpertina-border ease-in-out duration-200';
             break;
         case BUTTON_TYPE.noborder:
             buttonClass += ' text-black border ease-in-out duration-200';

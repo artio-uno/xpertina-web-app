@@ -7,3 +7,18 @@
     margin: '0px';
     padding: '0px';
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(to right, #4353ff, #1e2dd8, #4353ff);
+    background-size: 200% 200%;
+    animation: gradient 3s linear infinite;
+}

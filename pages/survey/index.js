@@ -5,6 +5,12 @@ import SurveyHeading from '@/components/survey/survey_typography/SurveyHeading';
 import SurveyDescription from '@/components/survey/survey_typography/SurveyDescription';
 import SurveySubheading from '@/components/survey/survey_typography/SurveySubheading';
 import InputField from '@/components/input/InputField';
+import Select from '@/components/select/Select';
+import Rocket from '@/assets/icons/Rocket';
+import Calculator from '@/assets/icons/Calculator';
+import Case from '@/assets/icons/Case';
+import Users from '@/assets/icons/Users';
+import SurveyStepNavigation from '@/components/survey/survey_navigation/SurveyStepNavigation';
 
 export default function Survey() {
     return (
@@ -31,6 +37,16 @@ export default function Survey() {
                             <InputField label={'Company Number'} />
                         </div>
                     </div>
+                    <div className="flex flex-col gap-5">
+                        <SurveySubheading text="Filters" />
+                        <div className="flex w-fit flex-wrap gap-8">
+                            <Select text="All in one" icon={<Rocket />} />
+                            <Select text="Annual report and financial statements" icon={<Calculator />} />
+                            <Select text="Agency package" icon={<Case />} />
+                            <Select text="Accounting" icon={<Users />} />
+                        </div>
+                    </div>
+                    <SurveyStepNavigation />
                 </SurveyContentLayout>
             </div>
         </div>

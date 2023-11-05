@@ -13,6 +13,16 @@ module.exports = {
             },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif']
+            },
+            colors: {
+                'xpertina-blue': '#4353FF',
+                'xpertina-green': '#23F95F',
+                'xpertina-border': '#E3E7ED',
+                'xpertina-label': '#424242'
+            },
+            boxShadow: {
+                xpertina: '0px 20px 60px -10px rgba(67, 83, 255, 0.4);',
+                'xpertina-hover': '0px 30px 60px -10px rgba(67, 83, 255, 0.6);'
             }
         }
     },
